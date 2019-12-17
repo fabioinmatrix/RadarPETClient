@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/start"
+    tools:context=".MainActivity">
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="142dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/img_go"
+        android:layout_width="110dp"
+        android:layout_height="139dp"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="TODO"
+        android:scaleType="fitStart"
+        app:layout_constraintEnd_toEndOf="@+id/edt_txt_date"
+        app:layout_constraintStart_toStartOf="@+id/edt_txt_date"
+        app:layout_constraintTop_toBottomOf="@+id/edt_txt_date"
+        app:srcCompat="@drawable/magnifying_glass" />
+
+    <ImageButton
+        android:id="@+id/img_calendar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="212dp"
+        android:backgroundTint="@android:color/transparent"
+        android:contentDescription="TODO"
+        android:scaleType="fitStart"
+        app:layout_constraintStart_toEndOf="@+id/edt_txt_date"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/calendar" />
+
+    <EditText
+        android:id="@+id/edt_txt_date"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="3dp"
+        android:autofillHints=""
+        android:background="@drawable/background"
+        android:ems="10"
+        android:inputType="date"
+        android:textAlignment="center"
+        android:textColor="#427a00"
+        android:textSize="12sp"
+        android:focusable="false"
+        android:enabled="true"
+        app:layout_constraintBottom_toBottomOf="@+id/img_calendar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/img_calendar"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tv_select_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/select_date"
+        android:textColor="#427a00"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/edt_txt_date"
+        app:layout_constraintStart_toStartOf="@+id/edt_txt_date" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
